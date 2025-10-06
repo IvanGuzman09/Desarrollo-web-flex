@@ -1,0 +1,39 @@
+// Index
+
+.carousel-item {
+  img {
+    filter: brightness(70%);
+  }
+}
+
+.index {
+  &__icons__grid__container {
+    @include grid(3, 1, 1px);
+    justify-content: center;
+    &__item {
+      @include flex-center;
+      background-color: $green;
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+      i {
+        font-size: 48px;
+      }
+    }
+  }
+
+  &__desc__grid__container {
+    @include grid(3, 1, 1px);
+    margin: 1 em;
+    height: auto;
+    &__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5em;
+      text-align: center;
+      font-weight: 300;
+    }
+  }
+}

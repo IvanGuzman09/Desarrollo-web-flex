@@ -1,0 +1,486 @@
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+  color: #f7f7f7;
+  width: 100%;
+}
+
+.accordion__container {
+  width: 80vw;
+  margin: 2em auto 0;
+}
+
+.carousel__container {
+  width: 50svw;
+  margin: 30px auto;
+}
+
+.quote__container {
+  width: 50svw;
+  margin: 30px auto;
+  border: 3px solid #65a46d;
+}
+
+.btn-enviar {
+  background-color: rgba(247, 247, 247, 0.6705882353);
+  border: 1px solid #65a46d;
+  box-shadow: 1px 1px 0px 0px #65a46d;
+  color: #65a46d;
+}
+.btn-enviar:hover {
+  background-color: #65a46d;
+  color: #f7f7f7;
+  border: 1px solid #65a46d;
+  box-shadow: none;
+}
+
+.carousel-item img {
+  filter: brightness(70%);
+}
+
+.index__icons__grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 1px;
+  justify-content: center;
+}
+.index__icons__grid__container__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #65a46d;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+.index__icons__grid__container__item i {
+  font-size: 48px;
+}
+.index__desc__grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 1px;
+  margin: 1 em;
+  height: auto;
+}
+.index__desc__grid__container__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5em;
+  text-align: center;
+  font-weight: 300;
+}
+
+.alojamiento__grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: " aside card-uno card-dos " " aside card-tres card-cuatro " " aside card-cinco card-seis ";
+  gap: 2px;
+  margin-top: 0em;
+}
+.alojamiento__grid-container a {
+  text-decoration: none;
+  color: #212529;
+}
+.alojamiento__grid-container a:hover img {
+  filter: brightness(100%);
+}
+.alojamiento__card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "img head";
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+.alojamiento__card__card:hover {
+  transform: translate(-10px);
+}
+.alojamiento__img-container {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  overflow: hidden;
+}
+.alojamiento__img-container img {
+  filter: brightness(70%);
+}
+.alojamiento__card__body {
+  padding: 10px;
+}
+
+.img-card-uno,
+.img-card-dos,
+.img-card-tres,
+.img-card-cuatro,
+.img-card-cinco,
+.img-card-seis {
+  grid-area: img;
+}
+
+.body-card-uno,
+.body-card-dos,
+.body-card-tres,
+.body-card-cuatro,
+.body-card-cinco,
+.body-card-seis {
+  grid-area: head;
+}
+
+.aside-alojamiento {
+  width: 30vw;
+  height: 80vh;
+  grid-area: aside;
+  border-radius: 12px;
+  padding: 10px;
+  margin: 0.5em auto 0;
+  background-image: url(../assets/aside-alojamiento.jpg);
+  color: #212529;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.text-aside-container {
+  position: absolute;
+  top: 2em;
+  width: 90%;
+  height: 90%;
+  border-radius: 6px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "head" "body";
+  background-color: rgba(247, 247, 247, 0.6705882353);
+  color: #212529;
+  padding: 20px;
+}
+
+.aside-alojamiento h5 {
+  text-align: center;
+  grid-area: head;
+  padding: 5px;
+}
+.aside-alojamiento p {
+  grid-area: body;
+  padding: 5px;
+  overflow: auto;
+}
+
+.actividades__grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: "card-uno card-dos card-tres card-cuatro";
+  column-gap: 21px;
+  width: 80vw;
+}
+.actividades__flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2%;
+}
+.actividades__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  border-radius: 12px;
+  align-items: flex-end;
+  transition: transform 0.3s ease;
+}
+.actividades__card:hover {
+  transform: translate(0px, -10px);
+}
+.actividades__card__uno {
+  grid-area: card-uno;
+  background-image: url(../assets/paracaidismo.jpg);
+  background-size: cover;
+}
+.actividades__card__dos {
+  grid-area: card-dos;
+  background-image: url(../assets/surf.jpg);
+  background-size: cover;
+}
+.actividades__card__tres {
+  grid-area: card-tres;
+  background-image: url(../assets/buceo.jpg);
+  background-size: cover;
+}
+.actividades__card__cuatro {
+  grid-area: card-cuatro;
+  background-image: url(../assets/escalada.jpg);
+  background-size: cover;
+}
+.actividades__btn {
+  margin-bottom: 20px;
+}
+.actividades__btn button {
+  color: #f7f7f7;
+  background-color: #65a46d;
+  color: #f7f7f7;
+  border: 1px solid #65a46d;
+  box-shadow: none;
+}
+.actividades__btn:hover {
+  color: #f7f7f7;
+}
+
+.destinos__flex-container {
+  width: 40vw;
+  height: 80vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 5px;
+  margin: 5px auto 0;
+  justify-content: center;
+  padding: 5px;
+  grid-template-areas: "img-uno img-dos" "img-tres img-cuatro";
+  gap: 5px;
+}
+.destinos__img-uno {
+  grid-area: img-uno;
+}
+.destinos__img-uno:hover {
+  transform: translate(-10px, -10px);
+  transition: transform 0.3s ease;
+}
+.destinos__img-dos {
+  grid-area: img-dos;
+}
+.destinos__img-dos:hover {
+  transform: translate(10px, -10px);
+  transition: transform 0.3s ease;
+}
+.destinos__img-tres {
+  grid-area: img-tres;
+}
+.destinos__img-tres:hover {
+  transform: translate(-10px, 10px);
+  transition: transform 0.3s ease;
+}
+.destinos__img-cuatro {
+  grid-area: img-cuatro;
+}
+.destinos__img-cuatro:hover {
+  transform: translate(10px, 10px);
+  transition: transform 0.3s ease;
+}
+.destinos__img-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+.destinos__img-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+}
+.destinos__img-container img:hover {
+  filter: brightness(90%);
+}
+.destinos__img-container span {
+  color: #f7f7f7;
+  position: absolute;
+  bottom: 5%;
+  left: 40%;
+  z-index: 2;
+  font-size: larger;
+  pointer-events: none;
+  background-color: rgba(101, 164, 109, 0.5098039216);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.destinos__grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  grid-gap: 0px;
+  grid-template-areas: "gallery aside";
+  max-width: 100vw;
+}
+.destinos__aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: aside;
+  position: relative;
+  max-width: 100%;
+}
+.destinos__aside p {
+  position: absolute;
+  left: 50px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #212529;
+}
+.destinos__gallery {
+  grid-area: gallery;
+  margin-left: 50px;
+}
+
+.faq__grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-template-areas: "faq" "questions";
+}
+
+.faq__questions {
+  grid-area: faq;
+  width: 80vw;
+  margin: 1.5em auto 0;
+}
+
+.faq__btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: questions;
+  margin-top: 20px;
+}
+.faq__btn-container button {
+  margin: 0 auto;
+}
+
+.reserva__form-container {
+  width: 80%;
+  padding: 20px;
+}
+.reserva__page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 94vh;
+  align-items: flex-start;
+  background-image: url(../assets/booking-fondo.jpg);
+  background-size: cover;
+  background-position: center;
+  overflow-y: hidden;
+}
+.reserva__form-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 70vh;
+  background-color: rgba(247, 247, 247, 0.6705882353);
+  border-radius: 24px;
+  margin-top: 1em;
+}
+
+/* Small devices */
+@media (max-width: 576px) {
+  /* Index */
+  .carousel__container {
+    width: 100svw;
+  }
+  .quote__container {
+    width: 100svw;
+  }
+  .index__desc__grid__container__item {
+    font-size: small;
+    text-align: left;
+  }
+  /* Destinos */
+  .destinos__img-uno:hover, .destinos__img-dos:hover, .destinos__img-tres:hover, .destinos__img-cuatro:hover {
+    transform: none;
+  }
+  .destinos__flex-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 4px;
+    width: 100vw;
+    height: 80vh;
+    grid-template-areas: "img-uno" "img-dos" "img-tres" "img-cuatro";
+    padding: 0px;
+  }
+  .destinos__grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "gallery" "aside";
+  }
+  .destinos__gallery {
+    margin: 1em 0px;
+  }
+  .destinos__img-container {
+    width: 100vw;
+    margin: 0px;
+  }
+  .destinos__aside {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0px;
+  }
+  .destinos__aside p {
+    font-size: smaller;
+    width: 80vw;
+  }
+  /* Alojamiento */
+  .alojamiento__grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, auto);
+    grid-template-areas: " aside " " card-uno " " card-dos " " card-tres " " card-cuatro " " card-cinco " " card-seis ";
+    gap: 10px;
+    width: 100vw;
+  }
+  .alojamiento__card {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "img head";
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+  }
+  .alojamiento__card__body p {
+    font-size: small;
+  }
+  .aside-alojamiento {
+    width: 100vw;
+    height: 60vh;
+    margin: 0px;
+    font-size: small;
+  }
+  /* Actividades */
+  .actividades__grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "card-uno" "card-dos" "card-tres" "card-cuatro";
+    row-gap: 5px;
+    width: 100vw;
+  }
+  .actividades__card:hover {
+    transform: none;
+  }
+  .reserva__form-card {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+    margin: 0px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

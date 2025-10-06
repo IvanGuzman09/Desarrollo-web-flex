@@ -1,0 +1,141 @@
+// Media queries
+
+/* Small devices */
+
+@media (max-width: 576px) {
+  /* Index */
+  .carousel__container {
+    width: 100svw;
+  }
+
+  .quote__container {
+    width: 100svw;
+  }
+
+  .index {
+    &__desc__grid__container {
+      &__item {
+        font-size: small;
+        text-align: left;
+      }
+    }
+  }
+
+  /* Destinos */
+
+  .destinos {
+    &__img-uno:hover,
+    &__img-dos:hover,
+    &__img-tres:hover,
+    &__img-cuatro:hover {
+      transform: none;
+    }
+
+    &__flex-container {
+      @include grid(1, 4, 4px);
+      @include w-h(100vw, 80vh);
+      grid-template-areas:
+        "img-uno"
+        "img-dos"
+        "img-tres"
+        "img-cuatro";
+      padding: 0px;
+    }
+
+    &__grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas:
+        "gallery"
+        "aside";
+    }
+
+    &__gallery {
+      margin: 1em 0px;
+    }
+
+    &__img-container {
+      width: 100vw;
+      margin: 0px;
+    }
+
+    &__aside {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 0px;
+      & p {
+        font-size: smaller;
+        width: 80vw;
+      }
+    }
+  }
+
+  /* Alojamiento */
+
+  .alojamiento {
+    &__grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(7, auto);
+      grid-template-areas:
+        " aside "
+        " card-uno "
+        " card-dos "
+        " card-tres "
+        " card-cuatro "
+        " card-cinco "
+        " card-seis ";
+      gap: 10px;
+      width: 100vw;
+    }
+
+    &__card {
+      @include alojamiento-grid-card;
+      border-radius: 16px;
+      transition: $transform;
+      padding: 10px;
+
+      &__body {
+        p {
+          font-size: small;
+        }
+      }
+    }
+  }
+
+  .aside-alojamiento {
+    @include w-h(100vw, 60vh);
+    margin: 0px;
+    font-size: small;
+  }
+
+  /* Actividades */
+
+  .actividades {
+    &__grid-container {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+        "card-uno"
+        "card-dos"
+        "card-tres"
+        "card-cuatro";
+      row-gap: 5px;
+      width: 100vw;
+    }
+  }
+
+  .actividades__card:hover {
+    transform: none;
+  }
+
+  // Reserva
+  .reserva__form-card {
+    @include w-h(100vw, 100vh);
+    border-radius: 0px;
+    margin: 0px;
+  }
+}
